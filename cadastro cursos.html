@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+ <html lang="pt-br">
+   <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+     <title>Cadastro dos Cursos</title>
+   </head>
+<body>
+  <div id="interface">
+  
+  <div>
+    <h1 id="titulo">Cadastro</h1>
+    
+    <br />
+    <hr />
+    <hr />
+    <br />
+    
+    <p id="subtitulo">Preencha todos os campos.</p>
+    <br>
+  </div>
+  
+  <form>
+    <fieldset class="grupo">
+      <div>
+        <label for="curso"><strong>Curso</strong></label>
+        <input type="text" nome="curso" id="curso" required>
+      </div>
+        
+        <div class="campo">
+          <label for="valor"><strong>Valor</strong></label>
+          <input type="text" nome="valor" id="valor" required>
+        </div>
+    </fieldset>
+    
+    <div class="campo">
+      <label for="carga"><strong>Carga Horária</strong></label>
+      <input type="email" nome="carga" id="carga" required>
+    </div>
+    
+    <div class="campo">
+      <label for="data"><strong>Data de Início do Curso</strong></label>
+      <input type="date" nome="data" id="data" required>
+    </div>
+    
+    <div class="campo">
+      <label for="certificado"><strong>Deseja certificado?</strong></label>
+      <select>
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+      </select>
+    </div>
+    
+   <fieldset class="grupo">
+    <div class="campo">
+      <label><strong>Em qual idioma você quer ter acesso ao material do <em>Curso</em>?</strong></label>
+      <br>
+      <input type="checkbox" id="idioma1" nome="idioma1" value="Ingles">
+      <label for="idioma1">Inglês</label>
+      <input type="checkbox" id="idioma2" nome="idioma2" value="Portugues(Brasil)">
+      <label for="idioma2">Português(Brasil)</label>
+      <input type="checkbox" id="idioma3" nome="idioma3" value="Alemao">
+      <label for="idioma3">Alemão</label>
+      <input type="checkbox" id="idioma4" nome="idioma4" value="Espanhol">
+      <label for="idioma4">Espanhol</label>
+    </div>
+   </fieldset>
+    
+    <div>
+      <br>
+      <label>Conte sua experiência ou deixe uma sugestão:</label>
+      <textarea row="6" style="width:26em" id="experiencia" nome="experiencia"></textarea>
+    </div>
+    <br>
+    <button class="botao" type="submit">Concluido</button>
+  </form>
+  
+  <br />
+  <hr />
+  <hr />
+  <br />
+  
+  <article>
+  <h2>Lista de Cadastrados</h2>
+  <hr>
+  <table border="1">
+    <tbody>
+    <tr>
+      <td>Infórmatica</td>
+      <td>R$00,00</td>
+      <td>40 horas</td>
+      <td>01/04/2021</td>
+      <td>Certificado/Sim</td>
+      <td>Inglês</td>
+      <td><button class="botao" type="submit">Editar</button></td>
+      <td><button class="botao" type="submit">Apagar</button></td>
+    </tr>
+    <tr>
+      <td>Educação</td>
+      <td>R$00,00</td>
+      <td>60 horas</td>
+      <td>27/07/2021</td>
+      <td>Certificado/Sim</td>
+      <td>Português(Brasil)</td>
+      <td><button class="botao" type="submit">Editar</button></td>
+      <td><button class="botao" type="submit">Apagar</button></td>
+    </tr>
+    <tr>
+      <td>Segurança</td>
+      <td>R$00,00</td>
+      <td>60 horas</td>
+      <td>28/10/2021</td>
+      <td>Certificado/Sim</td>
+      <td>Espanhol</td>
+      <td><button class="botao" type="submit">Editar</button></td>
+      <td><button class="botao" type="submit">Apagar</button></td>
+    </tr>
+    </tbody>
+  </table>
+  </article>
+     
+  <style>
+   body{
+     background-color: #4B0082;
+     color: rgba(0,0,0,1);
+   }
+    
+   div#interface{
+     width: 800px;
+     background-color: #ffffff;
+     margin: 20px auto 0px auto;
+     box-shadow: 0px 0px 10px rgba(0,0,0, .5);
+     padding: 10px;
+   }
+    
+  {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #titulo{
+    font-family: sans-serif;
+    color: #380B61;
+    margin-left: 7%;
+  }
+ 
+  #subtitulo{
+    font-family: sans-serif;
+    color: #380B61;
+    margin-left: 10%;
+  }
+  
+  fieldset{
+    border: 0;
+  }
+  
+  body{
+    backgeound-color: #F0F8FF;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #59429d
+    margin-left: 36%;
+    margin-top: 2%;
+    justify-content: center;
+  }
+  
+  input, select, textarea, button{
+    border-radius: 5px;
+  }
+  
+  .campo {
+    margin-botton: 1em;
+  }
+  
+  .campo label{
+    margin-botton: 0.2em;
+    color: #59429d;
+    display: block;
+  }
+  
+  fieldset.grupo .campo{
+    float: left;
+    margin-right: 1em;
+  }
+  
+  .campo input [type="text"].botao{
+    font-size: 1.2em;
+    background: #59429d;
+    border: 0;
+    margin-botton: 1em;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .botao:hover{
+    background: #ccbbff;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+  }
+  
+  .botao, select{
+    cursos: pointer;
+  }
+  
+  #check{
+    display: inline-block;
+  }
+    
+  table {
+    text-align: center; 
+    font-family: Montserrat, Arial, sans-serif; 
+    background:#fafafa ; 
+    margin: 0 auto; 
+    width: 80%;
+  } 
+    
+  tr:nth-child(even) {
+    background:lightgray; 
+  }
+    
+  </style>
+  </div>
+</body>
+ </html>
